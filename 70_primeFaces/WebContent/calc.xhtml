@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" >
+	
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculator</title>
+	</head>
+	
+	<body>
+	
+		<f:view>
+			<h:form>
+				
+				<h:inputText value="#{kalk.a}" /> <br/>
+				<h:inputText value="#{kalk.b}" /> <br/>
+				<h:commandButton actionListener="#{kalk.add}" value="Sum" /><br/>
+				
+				<h:outputLabel value="#{kalk.res}" /><br/>
+	
+				<p:dataTable value="#{kalk.history}"  var="r" >
+				
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Calculation" />
+						</f:facet>
+						<h:outputText value="#{r.calc}" />
+					</p:column>
+					
+					<p:column>
+						<f:facet name="header">
+							<h:outputText value="Result" />
+						</f:facet>
+						<h:outputText value="#{r.val}" />
+					</p:column>
+				
+				</p:dataTable>
+	
+				<p:editor />
+	
+			</h:form>
+	
+		</f:view>
+	
+	</body>
+</html>
