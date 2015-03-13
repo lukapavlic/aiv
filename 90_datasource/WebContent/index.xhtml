@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Delo s podatkovnimi viri</title>
+</head>
+<body>
+
+	<a href="#{request.contextPath}/faces/index.xhtml">Domov</a>
+	<hr/>
+	
+	<f:view>
+		<h:form>
+
+			<hr/>
+			Ime: <h:inputText value="#{demo.oseba.ime}" /><br/>
+			Priimek: <h:inputText value="#{demo.oseba.priimek}" /><br/>
+			<h:commandButton actionListener="#{demo.shrani}" value="V redu" />
+			
+			<h:dataTable value="#{demo.osebe}" var="o">
+				<h:column>
+					<h:outputText value="#{o.ime}"></h:outputText>				
+				</h:column>
+				<h:column>
+					<h:outputText value="#{o.priimek}"></h:outputText>	
+				</h:column>
+				<h:column>
+					<h:commandLink value="Spremeni" actionListener="#{demo.spremeni(o)}" />
+				</h:column>
+			</h:dataTable>
+
+		</h:form>
+	</f:view>
+
+</body>
+</html>
