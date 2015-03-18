@@ -40,6 +40,16 @@ public class Calculator {
 		resultToAdd=new Result();
 	}
 	
+	public String manualAdd() {
+		addNewResult();
+		return "addAgain";
+	}
+	
+	public String manualAddAndView() {
+		addNewResult();
+		return "ok";
+	}
+	
 	//binding case
 	private HtmlDataTable table;
 	

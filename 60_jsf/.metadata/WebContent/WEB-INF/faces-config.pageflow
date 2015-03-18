@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14248635504971" configfile="/60_jsf/WebContent/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14248635504971" configfile="/60_jsf/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="calc.xhtml" x="180" y="168" id="pf14266865892908" outlinks="pf14266865892909" inlinks="pf142668658929010" path="/calc.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="add.xhtml" x="408" y="168" id="pf142668658929011" outlinks="pf142668658929010 pf142668658929012" inlinks="pf14266865892909 pf142668658929012" path="/add.xhtml"/>
+  <links id="pf14266865892909" target="pf142668658929011" source="pf14266865892908" outcome="addNew">
+    <bendPoints d1Width="114" d1Height="50" d2Width="-114" d2Height="50"/>
+  </links>
+  <links id="pf142668658929010" target="pf14266865892908" source="pf142668658929011" outcome="ok">
+    <bendPoints d1Width="-120" d1Height="-33" d2Width="108" d2Height="-33"/>
+  </links>
+  <links id="pf142668658929012" target="pf142668658929011" source="pf142668658929011" outcome="addAgain">
+    <bendPoints d1Width="24" d1Height="-83" d2Width="24" d2Height="-83"/>
+    <bendPoints d1Width="97" d1Height="-55" d2Width="97" d2Height="-55"/>
+    <bendPoints d1Width="96" d1Height="-1" d2Width="96" d2Height="-1"/>
+  </links>
+</pageflow:Pageflow>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculator</title>
+	</head>
+	
+	<body>
+	
+		<a href="calc.xhtml">Calc</a>
+	
+		<f:view>
+			<h:form>
+			
+				<h:messages /><br/><br/>
+			
+				
+				Manual all result: <br/>
+				Calculation:
+				<h:inputText id="in_c" value="#{kalk.resultToAdd.calc}" required="true">
+					<f:validator validatorId="PlusValidator" />
+				</h:inputText>
+				 <h:message for="in_c" style="color:red" /> <br/>
+				Result: 
+				<h:inputText id="in_r" value="#{kalk.resultToAdd.val}" >
+					<f:validateLongRange minimum="5" maximum="66"/>
+				</h:inputText>
+				<h:message for="in_r" showSummary="true" showDetail="false" /> <br/>
+				
+				<h:commandButton value="Add" action="#{kalk.manualAdd}" />
+				<h:commandButton value="Add and View" action="#{kalk.manualAddAndView}" />
+			
+			</h:form>
+	
+		</f:view>
+	
+	
+	</body>
+</html>

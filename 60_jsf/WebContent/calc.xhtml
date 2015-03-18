@@ -64,6 +64,7 @@
 				</h:inputText>
 				<h:message for="in_r" showSummary="true" showDetail="false" /> <br/>
 				<h:commandButton value="Add" actionListener="#{kalk.addNewResult}" />
+				
 			</h:form>
 			
 			<h:form>
@@ -75,7 +76,10 @@
 				<h:message for="in_new_r" style="color:red" />
 				<h:commandButton value="Test" />
 			</h:form>
-	
+			
+			<h:form>
+				<h:commandButton value="Navigate to Add" action="addNew" />
+			</h:form>
 		</f:view>
 	
 	

@@ -4,5 +4,29 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
     version="2.2">
+	<navigation-rule>
+		<display-name>calc.xhtml</display-name>
+		<from-view-id>/calc.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>addNew</from-outcome>
+			<to-view-id>/add.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>add.xhtml</display-name>
+		<from-view-id>/add.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>ok</from-outcome>
+			<to-view-id>/calc.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>add.xhtml</display-name>
+		<from-view-id>/add.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>addAgain</from-outcome>
+			<to-view-id>/add.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
 
 </faces-config>
