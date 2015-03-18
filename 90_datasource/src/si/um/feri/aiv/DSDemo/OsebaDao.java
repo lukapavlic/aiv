@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
@@ -25,6 +24,7 @@ public class OsebaDao {
 		try {
 			conn=baza.getConnection();
 			conn.createStatement().execute("create table if not exists oseba(id int auto_increment, ime varchar, priimek varchar)");
+		//	conn.createStatement().execute("create table oseba(id int auto_increment, ime varchar, priimek varchar, primary key (id))");
 		} finally {
 			if (conn!=null) conn.close();
 		}
