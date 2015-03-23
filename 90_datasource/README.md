@@ -10,3 +10,5 @@ DataSource baza;
 Sicer pa je možna pridobitev podatkovnega vira tudi preko JNDI poizvedbe:
 
 baza=(DataSource)new InitialContext().lookup("java:jboss/datasources/ExampleDS");
+
+Primer demonstrira tudi preklop podatkovne baze na MySql, pridobivanje generiranega identifikatorja in uporabo UTF8 pri spletnih obrazcih (šumniki...).
