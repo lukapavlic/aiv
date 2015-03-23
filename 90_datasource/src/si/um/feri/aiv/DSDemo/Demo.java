@@ -12,13 +12,23 @@ public class Demo {
 	
 	private Oseba oseba=new Oseba();
 
-	@Resource(lookup="java:jboss/datasources/ExampleDS")
+	@Resource(lookup="java:jboss/datasource/PetekBaza")
+//	@Resource(lookup="java:jboss/datasources/ExampleDS")
 	DataSource baza;
 	
 	public List<Oseba> getOsebe() throws Exception {
 		return new OsebaDao(baza).vrniVse();
 	}
 
+	public void test() throws Exception {
+		OsebaDao od=new OsebaDao(baza);
+		Oseba o=new Oseba("Božièek", "Prišel",-1);
+		System.out.println(o);
+		od.shrani(o);
+		System.out.println(o);
+		System.out.println(od.najdi(o.getId()));
+	}
+	
 	public void shrani() throws Exception {
 		OsebaDao od=new OsebaDao(baza);
 		od.shrani(oseba);

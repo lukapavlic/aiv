@@ -59,10 +59,15 @@ public class OsebaDao {
 				ps.setInt(3, o.getId());
 				ps.executeUpdate();
 			} else {
-				PreparedStatement ps=conn.prepareStatement("insert into oseba(ime , priimek ) values (?,?)");
+				PreparedStatement ps=conn.prepareStatement("insert into oseba(ime , priimek ) values (?,?)",PreparedStatement.RETURN_GENERATED_KEYS);
 				ps.setString(1, o.getIme());
 				ps.setString(2, o.getPriimek());
 				ps.executeUpdate();
+				//get generated ID
+				ResultSet res = ps.getGeneratedKeys();
+				while (res.next())
+					o.setId(res.getInt(1));
+				res.close();
 			}
 		} finally {
 			conn.close();
