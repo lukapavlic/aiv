@@ -1,4 +1,4 @@
-# Uporaba podatkovnega vira v DAO vzorcu - primer na WildFly 8.2
+# Uporaba podatkovnega vira v DAO vzorcu - primer na WildFly (testirano na 8.2, 9 in 10)
 
 Primer povezovanja na podatkovne vire aplikacijskega strežnika. V primeru uporabimo kar demo podatkovni vir na vgrajeni podatkovni bazi H2.
 
