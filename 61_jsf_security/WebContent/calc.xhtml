@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculator</title>
+	</head>
+	
+	<body>
+	
+		<a href="calc.xhtml">Calc</a>
+	
+		<f:view>
+			<h:form>
+			
+				<h:messages /><br/><br/>
+			
+				<h:inputText id="in_a" value="#{kalk.a}" /> <h:message for="in_a" /> <br/>
+				<h:inputText id="in_b" value="#{kalk.b}" /> <h:message for="in_b" />  <br/>
+				<h:commandButton actionListener="#{kalk.add}" value="Sum" /><br/>
+				<h:outputLabel value="#{kalk.res}" /><br/>
+			
+				<h:dataTable value="#{kalk.history}"  var="r" >
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Calculation" />
+						</f:facet>
+						<h:outputText value="#{r.calc}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Result" />
+						</f:facet>
+						<h:outputText value="#{r.val}" />
+					</h:column>
+					<h:column>
+						<h:commandLink value="Remove" actionListener="#{kalk.removeFromHistory(r.id)}" />
+					</h:column>
+				
+				</h:dataTable>
+	
+			</h:form>
+			
+			<h:form>
+				<h:commandButton value="Navigate to Add" action="add" />
+			</h:form>
+			
+			<h:form>
+				<h:commandButton value="Logout" action="#{kalk.logout}" />
+			</h:form>
+			
+		</f:view>
+	
+	</body>
+</html>
