@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculator</title>
+	</head>
+	
+	<body>
+	
+		<a href="calc.xhtml">Calc</a>
+	
+		<f:view>
+			<h:form>
+			
+				Manual all result: <br/>
+				Calculation:
+				<h:inputText id="in_c" value="#{kalk.resultToAdd.calc}" /><br/>
+				Result: 
+				<h:inputText id="in_r" value="#{kalk.resultToAdd.val}" />
+				
+				<br/>
+				<h:commandButton value="Add" actionListener="#{kalk.addNewResult}" />
+				<h:commandButton value="Add and View" actionListener="#{kalk.addNewResult}" action="calc" />
+			
+			</h:form>
+	
+		</f:view>
+	
+	</body>
+</html>

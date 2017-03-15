@@ -12,8 +12,8 @@ public class Demo {
 	
 	private Oseba oseba=new Oseba();
 
-//	@Resource(lookup="java:jboss/datasource/PetekBaza")
-	@Resource(lookup="java:jboss/datasources/ExampleDS")
+	@Resource(lookup="java:jboss/datasources/MyDS")
+//	@Resource(lookup="java:jboss/datasources/ExampleDS")
 	DataSource baza;
 	
 	public List<Oseba> getOsebe() throws Exception {
