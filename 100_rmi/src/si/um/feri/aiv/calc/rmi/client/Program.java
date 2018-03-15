@@ -6,6 +6,7 @@ import si.um.feri.aiv.calc.rmi.server.Calc;
 public class Program {
 
 	public static void main(String[] args) throws Exception {
+		
 		Calc c=(Calc)Naming.lookup("//localhost/calc");
 				//new Calculator();
 		

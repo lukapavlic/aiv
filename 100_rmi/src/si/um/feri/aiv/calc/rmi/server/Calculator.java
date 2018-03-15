@@ -1,10 +1,11 @@
 package si.um.feri.aiv.calc.rmi.server;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-import javax.rmi.PortableRemoteObject;
+public class Calculator extends UnicastRemoteObject implements Calc {
 
-public class Calculator extends PortableRemoteObject implements Calc {
+	private static final long serialVersionUID = -8325734978425380619L;
 
 	public Calculator() throws RemoteException {
 	}

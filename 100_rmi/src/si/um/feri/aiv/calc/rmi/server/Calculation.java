@@ -7,7 +7,6 @@ public class Calculation implements Serializable {
 	private static final long serialVersionUID = 29445404005203442L;
 
 	public Calculation() {
-		
 	}
 	
 	public Calculation(String calc, double result) {
