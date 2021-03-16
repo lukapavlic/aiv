@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>si.feri</groupId>
+	<artifactId>EmptySampleEjbCli</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<dependencies>
+	
+		<!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client -->
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-client</artifactId>
+			<version>4.0.0.Final</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.wildfly/wildfly-ejb-client-bom -->
+		<dependency>
+		    <groupId>org.wildfly</groupId>
+		    <artifactId>wildfly-ejb-client-bom</artifactId>
+		    <version>16.0.0.Final</version>
+		    <type>pom</type>
+		</dependency>
+		
+	</dependencies>
+
+</project>

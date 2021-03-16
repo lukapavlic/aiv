@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/application_7.xsd" id="Application_ID" version="7">
+  <display-name>110_ear</display-name>
+  <module>
+    <web>
+      <web-uri>112_ear_web.war</web-uri>
+      <context-root>112_ear_web</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>111_ear_ejb.jar</ejb>
+  </module>
+</application>

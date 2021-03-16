@@ -1,0 +1,7 @@
+
+DROP TABLE IF EXISTS posta_oseba;
+
+DROP TABLE IF EXISTS oseba;
+
+DROP TABLE IF EXISTS posta;
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<ui:composition template="WEB-INF/template/template.xhtml">
+	
+		<ui:define name="content">
+			<f:view>
+				<h:form>
+
+					<table border="0">
+						<tr>
+							<td>Ime:</td>
+							<td><h:outputText value="#{demo.izbranaOseba.ime}"/></td>
+						</tr>
+						<tr>
+							<td>Priimek:</td>
+							<td><h:outputText value="#{demo.izbranaOseba.priimek}"/></td>
+						</tr>
+						<tr>
+							<td>E-mail:</td>
+							<td><h:outputText value="#{demo.izbranaOseba.email}"/></td>
+						</tr>
+						<tr>
+							<td>Vnos:</td>
+							<td>
+								<h:outputText value="#{demo.izbranaOseba.datumVpisa.time}">
+									<f:convertDateTime pattern="dd. MM. yyyy HH:mm:ss" />
+								</h:outputText>
+							</td>
+						</tr>
+					</table>
+					 
+				</h:form>
+			</f:view>
+		</ui:define>
+		
+	</ui:composition>
+
+</html>
+
+
+
+
+
+
+
+
+

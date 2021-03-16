@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<ui:composition template="WEB-INF/template/template.xhtml">
+	
+		<ui:define name="content">
+			<f:view>
+				<h:form>
+
+					<table border="0">
+						<tr>
+							<td>Ime:</td>
+							<td><h:outputText value="#{osebe.izbranaOseba.ime}"/></td>
+						</tr>
+						<tr>
+							<td>Priimek:</td>
+							<td><h:outputText value="#{osebe.izbranaOseba.priimek}"/></td>
+						</tr>
+						<tr>
+							<td>Spol:</td>
+							<td>
+								<h:outputText value="MOŠKI" rendered="#{osebe.izbranaOseba.spol eq 'M'}"/>
+								<h:outputText value="ŽENSKA" rendered="#{osebe.izbranaOseba.spol eq 'Z'}"/>
+							</td>
+						</tr>
+						<tr>
+							<td>Datum rojstva:</td>
+							<td>
+								<h:outputText value="#{osebe.izbranaOseba.datumRojstva.time}">
+									<f:convertDateTime pattern="dd. MM. yyyy" />
+								</h:outputText>
+							</td>
+						</tr>
+						<tr>
+							<td>Vnos:</td>
+							<td>
+								<h:outputText value="#{osebe.izbranaOseba.datumVpisa.time}">
+									<f:convertDateTime pattern="dd. MM. yyyy HH:mm:ss" />
+								</h:outputText>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								
+								<h:dataTable value="#{osebe.izbranaOseba.kontakti}" var="k">
+									<f:facet name="header">
+										<h:outputText value="Kontakti"/>
+									</f:facet>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Tip kontakta"/>
+										</f:facet>
+										<h:outputText  value="#{k.tip}"/>
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="Telefon"/>
+										</f:facet>
+										<h:outputText  value="#{k.telefon}"/>
+									</h:column>
+									<h:column>
+										<f:facet name="header">
+											<h:outputText value="E-mail"/>
+										</f:facet>
+										<h:outputText  value="#{k.email}"/>
+									</h:column>
+								</h:dataTable>
+								<h:commandLink action="dodajKontakt.xhtml" value="Dodaj kontakt"/>
+							</td>
+						</tr>
+					</table>
+					 
+				</h:form>
+			</f:view>
+		</ui:define>
+		
+	</ui:composition>
+
+</html>
+
+
+
+
+
+
+
+
+

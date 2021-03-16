@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<title>Kalkulator</title>
+	</head>
+	
+	<body>
+		<h1>Kalkulator</h1>
+		
+		<f:view>
+			<h:form>
+				<h:messages></h:messages>
+			
+				Število 1: <h:inputText value="#{kalk.a}" /><br/>
+				Število 2: <h:inputText value="#{kalk.b}" /><br/>
+				<h:commandButton  actionListener="#{kalk.izracunaj}" value="Izračunaj"/><br/>
+			
+				Seštevek: <h:outputText value="#{kalk.sestevek}"></h:outputText><br/>
+				#{kalk.zmnozek}
+			
+			</h:form>
+		</f:view>
+		
+	</body>
+	
+</html>

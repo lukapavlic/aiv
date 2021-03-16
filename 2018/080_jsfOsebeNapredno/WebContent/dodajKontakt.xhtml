@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+	
+	<ui:composition template="WEB-INF/template/template.xhtml">
+	
+		<ui:define name="content">
+			<f:view>
+				<h:form>
+
+					<table border="0">
+						<tr>
+							<td>Tip kontakta:</td>
+							<td>
+								<h:selectOneRadio value="#{osebe.novKontakt.tip}">
+									<f:selectItem itemValue="Doma" itemLabel="Doma" />
+									<f:selectItem itemValue="Služba" itemLabel="Služba" />
+									<f:selectItem itemValue="Drugo" itemLabel="Drugo" />
+								</h:selectOneRadio>
+							</td>
+						</tr>
+						<tr>
+							<td>Telefon:</td>
+							<td>
+								<h:inputText value="#{osebe.novKontakt.telefon}" />
+							</td>
+						</tr>
+						<tr>
+							<td>E-mail:</td>
+							<td>
+								<h:inputText value="#{osebe.novKontakt.email}" />
+							</td>
+						</tr>
+						
+						<tr>
+							<td rowspan="2"><h:commandButton value="Dodaj" actionListener="#{osebe.dodajKontakt}" action="podrobnosti.xhtml"/></td>
+						</tr>
+					</table>
+					 
+				</h:form>
+			</f:view>
+		</ui:define>
+		
+	</ui:composition>
+
+</html>

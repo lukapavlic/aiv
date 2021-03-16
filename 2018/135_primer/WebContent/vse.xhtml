@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<ui:composition template="WEB-INF/template/template.xhtml">
+	
+		<ui:define name="content">
+			<f:view>
+				<h:form>
+
+					<h:dataTable value="#{vsitreningi.vsiTreningi}" var="t">
+						<f:facet name="header">
+							<h:outputText value="Seznam vseh treningov"/>
+						</f:facet>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Naziv"/>
+							</f:facet>
+							<h:outputText  value="#{t.naziv}"/>
+						</h:column>
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Stranka"/>
+							</f:facet>
+							<h:outputText  value="#{t.stranka}"/>
+						</h:column>
+						<h:column>
+							<h:link value="podrobnosti" outcome="podrobnosti">
+								<f:param name="id" value="#{t.id}" />
+							</h:link>
+						</h:column>
+					</h:dataTable>
+				</h:form>
+			</f:view>
+		</ui:define>
+		
+	</ui:composition>
+
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<ui:composition template="WEB-INF/template/template.xhtml">
+	
+		<ui:define name="content">
+			<f:view>
+
+				<f:metadata>
+					<f:viewParam name="id" value="#{pregledtreninga.izbranTreningId}" />
+				</f:metadata>
+
+				<table border="0">
+					<tr>
+						<td>Id:</td>
+						<td><h:outputText value="#{pregledtreninga.izbranTrening.id}"/> | <h:outputText value="#{pregledtreninga.izbranTrening.javaReference}"/></td>
+					</tr>
+					<tr>
+						<td>Naziv:</td>
+						<td><h:outputText value="#{pregledtreninga.izbranTrening.naziv}"/></td>
+					</tr>
+					<tr>
+						<td>Stranka:</td>
+						<td><h:outputText value="#{pregledtreninga.izbranTrening.stranka}"/></td>
+					</tr>
+					<tr>
+						<td>Trener:</td>
+						<td><h:outputText value="#{pregledtreninga.izbranTrening.trener}"/></td>
+					</tr>
+					<tr>
+						<td>Dni v ciklu:</td>
+						<td><h:outputText value="#{pregledtreninga.izbranTrening.dniVCiklu}"/></td>
+					</tr>
+					<tr>
+						<td>Vnos:</td>
+						<td>
+							<h:outputText value="#{pregledtreninga.izbranTrening.ustvarjen.time}">
+								<f:convertDateTime pattern="dd. MM. yyyy HH:mm:ss" />
+							</h:outputText>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<h:link value="uredi" outcome="uredi">
+								<f:param name="id" value="#{pregledtreninga.izbranTrening.id}" />
+							</h:link>
+						</td>
+					</tr>
+				</table>
+					 
+			</f:view>
+		</ui:define>
+		
+	</ui:composition>
+
+</html>

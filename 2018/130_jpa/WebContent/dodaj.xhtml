@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<ui:composition template="WEB-INF/template/template.xhtml">
+	
+		<ui:define name="content">
+			<f:view>
+				<h:form>
+
+					<table border="0">
+						<tr>
+							<td>Ime:</td>
+							<td><h:inputText value="#{demo.novaOseba.ime}"/></td>
+						</tr>
+						<tr>
+							<td>Priimek:</td>
+							<td>
+								<h:inputText id="n_priimek" value="#{demo.novaOseba.priimek}">
+									<f:validateRequired />
+								</h:inputText> *
+								<h:message for="n_priimek" style="color:red" />
+							</td>
+						</tr>
+						<tr>
+							<td>E-mail:</td>
+							<td>
+								<h:inputText id="n_email" value="#{demo.novaOseba.email}" validatorMessage="Vnesite ustrezen e-mail naslov">
+									<f:validateRequired />
+									<f:validateRegex pattern=".+\@.+\..+"  />
+								</h:inputText> *
+								<h:message for="n_email" style="color:red" />
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="2"><h:commandButton value="Dodaj" actionListener="#{demo.dodajOsebo}" action="vse.xhtml"/></td>
+						</tr>
+					</table>
+					 
+				</h:form>
+			</f:view>
+		</ui:define>
+		
+	</ui:composition>
+
+</html>

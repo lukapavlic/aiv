@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<head>
+		<meta charset="UTF-8" />
+		<title>Demo</title>
+	</head>
+	
+	<body>
+		<h1>JSF + EJB Demo</h1>
+		
+		<f:view>
+			<h:form>
+			
+				Vnesi novo ime:
+				<h:inputText value="#{zrno.novoIme}" />
+				<h:commandButton value="Dodaj" actionListener="#{zrno.dodajIme}" />
+							
+				<h:dataTable value="#{zrno.imena}" var="i">
+					<h:column>
+						<f:facet name="header">IMENA</f:facet>
+						<h:outputText value="#{i}"></h:outputText>
+					</h:column>
+				</h:dataTable>
+
+			</h:form>
+		</f:view>
+		
+	</body>
+	
+</html>

@@ -1,0 +1,2 @@
+# EJB projekt - sporocilna zrna
+

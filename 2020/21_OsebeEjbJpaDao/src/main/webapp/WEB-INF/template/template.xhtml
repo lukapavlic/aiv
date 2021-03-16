@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<head>
+	<meta charset="UTF-8" />
+	<title><ui:insert name="title">Sample</ui:insert></title>
+</head>
+
+<body>
+
+	<div id="header">
+		<ui:insert name="header">
+    		[
+    			<a href="#{facesContext.externalContext.applicationContextPath}/faces/vse.xhtml">Vse osebe</a> |
+    			<a href="#{facesContext.externalContext.applicationContextPath}/faces/dodaj.xhtml">Dodajanje</a>
+    		]
+    		<hr/>
+		</ui:insert>
+	</div>
+
+	<div id="content">
+		<ui:insert name="content">
+    		
+ 
+		</ui:insert>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<ui:composition template="WEB-INF/template/template.xhtml">
+	
+		<ui:define name="content">
+			<f:view>
+				<h:form>
+
+					<h:commandButton actionListener="#{demo.demo1}" value="JPA Demo 1" /> <br/><br/>
+					<h:commandButton actionListener="#{demo.demo2}" value="JPA Demo 2" /> <br/><br/>
+					<h:commandButton actionListener="#{demo.demo3}" value="JPA Demo 3" /> <br/><br/>
+
+				</h:form>
+			</f:view>
+		</ui:define>
+		
+	</ui:composition>
+
+</html>
+
+
+
+
+
+
+
+
+
