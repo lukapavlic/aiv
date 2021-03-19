@@ -1,4 +1,4 @@
-package si.um.feri.aiv.ejb;
+package si.um.feri.aiv.dao;
 
 import java.util.List;
 import si.um.feri.aiv.vao.Kontakt;

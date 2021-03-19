@@ -20,7 +20,9 @@
 	
 	Ime: <b>#{demo.izbranaOseba.ime}</b><br/>
 	Priimek: <b>#{demo.izbranaOseba.priimek}</b><br/>
-	E-mail: <b>#{demo.izbranaOseba.email}</b><br/>
+	E-mail: <b>#{demo.izbranaOseba.email}</b> - 
+	<h:commandLink value="Pošlji email" actionListener="#{mailSender.send(demo.izbranaOseba.email)}" />
+	<br/>
 	Vnos:	<b><h:outputText value="#{demo.izbranaOseba.datumVpisa.time}">
 				<f:convertDateTime pattern="dd. MM. yyyy HH:mm:ss" />
 			</h:outputText></b>

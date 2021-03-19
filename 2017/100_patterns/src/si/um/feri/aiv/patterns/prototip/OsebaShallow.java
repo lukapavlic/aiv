@@ -11,7 +11,7 @@ public class OsebaShallow implements Cloneable {
 	public OsebaShallow() {
 		this("", "","");
 	}
-
+	
 	public OsebaShallow(String ime, String priimek, String email) {
 		this.email = email;
 		this.ime = ime;

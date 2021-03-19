@@ -2,7 +2,7 @@ package si.um.feri.aiv.ejb;
 
 import javax.ejb.Stateless;
 
-//kalkulator ima tako remote kot local vmesnik - z razliènim naborom metod
+//kalkulator ima tako remote kot local vmesnik - z razlicnim naborom metod
 @Stateless
 public class CalculatorBean implements CalculatorRemote, CalculatorLocal {
 

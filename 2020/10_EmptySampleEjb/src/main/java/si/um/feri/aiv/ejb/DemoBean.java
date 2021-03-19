@@ -6,7 +6,6 @@ import javax.ejb.Stateless;
 @Stateless
 public class DemoBean implements Demo {
 
-	//povezovanje na EJB
 	@EJB
 	CalculatorLocal calc;
 	

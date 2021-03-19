@@ -16,6 +16,8 @@ import si.um.feri.aiv.vao.Oseba;
 @RequestScoped
 public class DemoRequestScopedBean implements Serializable {
 
+	private static final long serialVersionUID = 9048166857069095002L;
+
 	Logger log=LoggerFactory.getLogger(DemoRequestScopedBean.class);
 	
 	@EJB

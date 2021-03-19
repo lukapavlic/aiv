@@ -8,6 +8,8 @@ import javax.inject.Named;
 @SessionScoped
 public class KalkulatorJsfBean implements Serializable {
 	
+	private static final long serialVersionUID = -94208454007946956L;
+
 	private int a;
 	
 	private int b;
