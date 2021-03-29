@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Topic"),
 		@ActivationConfigProperty(propertyName = "destination", propertyValue = "jms/topic/test"),
 		@ActivationConfigProperty(propertyName = "acknowledgeMode", propertyValue = "Auto-acknowledge") 
-//		,@ActivationConfigProperty(propertyName = "subscriptionDurability", propertyValue = "Durable")
+		//,@ActivationConfigProperty(propertyName = "subscriptionDurability", propertyValue = "Durable")
 		})
 public class AIVMessageDrivenTopic implements MessageListener {
 

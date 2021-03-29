@@ -16,7 +16,8 @@ public class PrejemnikTema {
 		InitialContext ctx = new InitialContext();
 		Topic topic = (Topic) ctx.lookup("jms/topic/test");
 		TopicConnectionFactory factory = (TopicConnectionFactory) ctx.lookup("jms/RemoteConnectionFactory");
-		TopicConnection cnn = factory.createTopicConnection("guest","guest");
+//		TopicConnection cnn = factory.createTopicConnection("guest","guest");
+		TopicConnection cnn = factory.createTopicConnection();
 		TopicSession session = cnn.createTopicSession(false, TopicSession.AUTO_ACKNOWLEDGE);
 		cnn.start();
 		TopicSubscriber ts = session.createSubscriber(topic);

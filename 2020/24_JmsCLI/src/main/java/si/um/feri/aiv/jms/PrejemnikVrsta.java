@@ -16,7 +16,8 @@ public class PrejemnikVrsta {
 		InitialContext ctx = new InitialContext();
 		Queue queue = (Queue) ctx.lookup("jms/queue/test");
 		QueueConnectionFactory factory = (QueueConnectionFactory) ctx.lookup("jms/RemoteConnectionFactory");
-		QueueConnection cnn = factory.createQueueConnection("guest", "guest");
+		//QueueConnection cnn = factory.createQueueConnection("guest", "guest");
+		QueueConnection cnn = factory.createQueueConnection();
 		QueueSession session = cnn.createQueueSession(false, QueueSession.AUTO_ACKNOWLEDGE);
 		cnn.start();
 		QueueReceiver qr = session.createReceiver(queue);
