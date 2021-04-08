@@ -11,11 +11,11 @@
 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 		 
 			<property name="javax.persistence.schema-generation.create-source" value="script"/>
-	        <property name="javax.persistence.schema-generation.create-script-source" value="META-INF/create.sql" />
-	        <property name="javax.persistence.sql-load-script-source" value="META-INF/insert.sql" />
+	        <property name="javax.persistence.schema-generation.create-script-source" value="META-INF/create_mysql.sql" />
+	        <property name="javax.persistence.sql-load-script-source" value="META-INF/insert_mysql.sql" />
 	        
 	        <property name="javax.persistence.schema-generation.drop-source" value="script" />
-	        <property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/drop.sql" />
+	        <property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/drop_mysql.sql" />
 		 
 			<property name="hibernate.show_sql" value="true" />
 		</properties>

@@ -5,10 +5,8 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import si.um.feri.aiv.ejb.OsebeBean;
 import si.um.feri.aiv.vao.Oseba;
 

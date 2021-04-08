@@ -10,16 +10,15 @@ public class OsebeSoapClient {
 		
 		OsebeSoap os=new OsebeSoapService().getOsebeSoapPort();
 		
-//		Oseba o=new Oseba();
-//		o.setIme("Rdeca");
-//		o.setPriimek("Kapica");
-//		os.dodajOsebo(o);
+		Oseba o=new Oseba();
+		o.setIme("Rdeca");
+		o.setPriimek("Kapica");
+		o.setEmail("rdeca@kapica.si");
+		os.dodajOsebo(o);
 		
 		for (Oseba oo : os.vrniVseOsebe()) {
 			System.out.println(oo.getPriimek() + " "+oo.getIme());
 		}
-	
-
 			
 	}
 	
