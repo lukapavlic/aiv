@@ -10,7 +10,7 @@ public class PostPrimer extends ACUtils {
 
 	private static String url = "http://localhost:8080/325_rest_storitev/rest/osebe/oseba";
 		
-	private static String json = "{\"ime\":\"Peter\",\"priimek\":\"Klepec\",\"email\":\"nekdo23@nekaj.si\",\"datumVpisa\":1522792800000,\"bivalisce\":{\"koda\":\"2000\",\"naziv\":\"Maribor\"}}";
+	private static String json = "{\"ime\":\"Peter\",\"priimek\":\"Klepec\",\"email\":\"nekdo23@nekaj.si\",\"datumVpisa\":\"2017-04-05T01:00:00+02:00[Europe/Ljubljana]\",\"bivalisce\":{\"koda\":\"2000\",\"naziv\":\"Maribor\"}}";
 	
 	public static void main(String[] args) throws Exception {
 

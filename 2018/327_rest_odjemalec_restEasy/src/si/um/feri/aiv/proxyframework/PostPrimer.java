@@ -16,7 +16,7 @@ public class PostPrimer {
 		ResteasyWebTarget rt = (ResteasyWebTarget) ClientBuilder.newClient().target(url);
 		OsebeProxy osebeRest = rt.proxy(OsebeProxy.class);
 
-		Oseba o=new Oseba("Palèek","Smuk","palcek@smuk.si");
+		Oseba o=new Oseba("Palcek","Smuk","palcek@smuk.si");
 		Jsonb jsonb = JsonbBuilder.create();	
 		Response r = osebeRest.dodajOseboString(jsonb.toJson(o));
 	

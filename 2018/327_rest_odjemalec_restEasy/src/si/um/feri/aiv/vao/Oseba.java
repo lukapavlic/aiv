@@ -1,5 +1,8 @@
 package si.um.feri.aiv.vao;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
 public class Oseba {
 
 	public Oseba() {
@@ -26,7 +29,7 @@ public class Oseba {
 	
 	private String email;
 
-	private long datumVpisa;
+	private Calendar datumVpisa=new GregorianCalendar();
 	
 	private Posta bivalisce;
 
@@ -70,14 +73,14 @@ public class Oseba {
 		this.email = email;
 	}
 
-	public long getDatumVpisa() {
+	public Calendar getDatumVpisa() {
 		return datumVpisa;
 	}
 
-	public void setDatumVpisa(long datumVpisa) {
+	public void setDatumVpisa(Calendar datumVpisa) {
 		this.datumVpisa = datumVpisa;
 	}
-	
+
 	@Override
 	public String toString() {
 		return id+": "+ime + " " + priimek + " ("+email+"); vpis: "+datumVpisa;

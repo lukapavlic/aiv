@@ -3,6 +3,7 @@ package si.um.feri.aiv.soap;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 import si.um.feri.aiv.ejb.OsebeBean;
 import si.um.feri.aiv.vao.Oseba;

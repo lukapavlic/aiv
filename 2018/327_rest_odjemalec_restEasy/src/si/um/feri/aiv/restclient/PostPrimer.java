@@ -11,7 +11,7 @@ public class PostPrimer {
 
 	private static String url = "http://localhost:8080/325_rest_storitev/rest/osebe/oseba";
 		
-	private static String json = "{\"ime\":\"Peter\",\"priimek\":\"Klepec\",\"email\":\"nekdo23@nekaj.si\",\"datumVpisa\":1522792800000,\"bivalisce\":{\"koda\":\"2000\",\"naziv\":\"Maribor\"}}";
+	private static String json = "{\"ime\":\"Peter\",\"priimek\":\"Klepec\",\"email\":\"nekdo23@nekaj.si\",\"datumVpisa\":\"2018-04-04T01:00:00+02:00[Europe/Ljubljana]\",\"bivalisce\":{\"koda\":\"2000\",\"naziv\":\"Maribor\"}}";
 	
 	public static void main(String[] args) {
 
