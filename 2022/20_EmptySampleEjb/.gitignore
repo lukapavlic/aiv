@@ -2,6 +2,7 @@
 /build/
 /.idea/
 /.settings/
+/.metadata/
 /target/
 .project
 .classpath
