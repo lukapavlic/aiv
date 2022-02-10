@@ -3,6 +3,8 @@ package si.um.feri.aiv.ejb;
 import javax.naming.InitialContext;
 import si.um.feri.aiv.Calc;
 
+import java.util.Properties;
+
 public class CalcTest {
 
 	// WF says:
@@ -18,7 +20,12 @@ public class CalcTest {
 	
 	public static void main(String[] args) throws Exception {
 
-		InitialContext ctx=new InitialContext();
+		Properties props=new Properties();
+		props.put("java.naming.factory.initial","org.jboss.naming.remote.client.InitialContextFactory");
+		props.put("java.naming.provider.url","http-remoting://127.0.0.1:8080");
+		props.put("jboss.naming.client.ejb.context","true");
+		props.put("java.naming.factory.url.pkgs","org.jboss.ejb.client.naming");
+		InitialContext ctx=new InitialContext(props);
 		
 		Calc c = (Calc) ctx.lookup("EmptySampleEjb/CalcBean!si.um.feri.aiv.Calc");
 
