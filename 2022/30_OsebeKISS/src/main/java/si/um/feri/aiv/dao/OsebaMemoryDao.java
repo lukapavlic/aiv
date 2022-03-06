@@ -12,15 +12,13 @@ public class OsebaMemoryDao implements OsebaDao {
 
 	Logger log=Logger.getLogger(OsebaMemoryDao.class.toString());
 	
-	private OsebaMemoryDao() {
-		osebe=Collections.synchronizedList(new ArrayList<Oseba>());
-	}
+	private OsebaMemoryDao() {}
 	private static OsebaMemoryDao instance=new OsebaMemoryDao();
 	public static OsebaMemoryDao getInstance() {
 		return instance;
 	}
 	
-	private List<Oseba> osebe;
+	private List<Oseba> osebe=Collections.synchronizedList(new ArrayList<Oseba>());
 
 	@Override
 	public List<Oseba> vrniVse() {
@@ -72,6 +70,7 @@ public class OsebaMemoryDao implements OsebaDao {
 		log.info("DAO: shranjujem kontakt "+k+" osebi "+emailOsebe);
 		Oseba najdena=najdi(emailOsebe);
 		if (najdena==null) return;
+		if (k.getId()<0) k.setId(najdena.getNaslednjiIdKontakta());
 		izbrisiKontakt(k.getId(), emailOsebe);
 		najdena.getKontakti().add(k);
 	}

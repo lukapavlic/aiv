@@ -15,6 +15,12 @@
 			<version>9.1.0</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>11.0.0</version>
+			<classifier>jakarta</classifier>
+		</dependency>
 	</dependencies>
 	
 	<build>

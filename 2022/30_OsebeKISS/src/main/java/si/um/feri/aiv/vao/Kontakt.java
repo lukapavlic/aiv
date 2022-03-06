@@ -7,15 +7,12 @@ public class Kontakt {
 	}
 	
 	public Kontakt(String tip, String naziv) {
-		super();
-		this.id=next_id--;
 		this.tip = tip;
 		this.naziv = naziv;
 		this.urejanje=true;
 	}
 
-	private static int next_id=-1;
-	private int id;
+	private int id=-1;
 	private String tip;
 	private String naziv;
 	private boolean urejanje;

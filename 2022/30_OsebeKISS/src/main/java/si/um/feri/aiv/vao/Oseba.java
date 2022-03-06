@@ -27,7 +27,14 @@ public class Oseba {
 	private String priimek;
 	private Calendar datumVpisa;
 	private List<Kontakt> kontakti;
-	
+
+	public synchronized int getNaslednjiIdKontakta() {
+		int maxId=-1;
+		for (Kontakt k:getKontakti())
+			if (k.getId()>maxId) maxId=k.getId();
+		return maxId+1;
+	}
+
 	public List<Kontakt> getKontakti() {
 		return kontakti;
 	}
