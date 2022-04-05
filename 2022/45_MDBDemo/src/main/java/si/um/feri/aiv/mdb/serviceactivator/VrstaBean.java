@@ -10,7 +10,7 @@ import jakarta.jms.TextMessage;
 import java.util.logging.Logger;
 
 @MessageDriven(activationConfig = {
-		@ActivationConfigProperty(propertyName = "destination", propertyValue = "jms/queue/test"),
+		@ActivationConfigProperty(propertyName = "destination", propertyValue = "jms/queue/test2"),
 		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "jakarta.jms.Queue") })
 public class VrstaBean implements MessageListener {
 

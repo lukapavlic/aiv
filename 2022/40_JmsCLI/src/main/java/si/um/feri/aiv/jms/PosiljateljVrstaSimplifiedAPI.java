@@ -21,14 +21,14 @@ public class PosiljateljVrstaSimplifiedAPI {
 		producer.send(destination,"Ojla!");
 		producer.send(destination,"Pa spet.");
 		producer.send(destination,"Pa se enkrat :).");
-		
+
 		//sporocilo, ki ni trajno
 		Message m=ctx.createTextMessage("NETRAJNO SPOROCILO");
 		m.setJMSDeliveryMode(DeliveryMode.NON_PERSISTENT);
 		m.setJMSPriority(3);
 		m.setJMSExpiration(2000);
 		producer.send(destination,m);
-		
+
 		//sporocilo, ki je trajno
 		m=ctx.createTextMessage("TRAJNO SPOROCILO");
 		m.setJMSDeliveryMode(DeliveryMode.PERSISTENT);

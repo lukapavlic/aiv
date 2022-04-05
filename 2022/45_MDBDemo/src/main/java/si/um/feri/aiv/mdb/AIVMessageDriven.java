@@ -1,8 +1,8 @@
 package si.um.feri.aiv.mdb;
 
 import jakarta.ejb.ActivationConfigProperty;
+import jakarta.ejb.EJB;
 import jakarta.ejb.MessageDriven;
-import jakarta.jms.JMSException;
 import jakarta.jms.Message;
 import jakarta.jms.MessageListener;
 import jakarta.jms.TextMessage;
@@ -16,12 +16,16 @@ public class AIVMessageDriven implements MessageListener {
 
 	Logger log=Logger.getLogger(AIVMessageDriven.class.toString());
 
+	@EJB
+	GnjaviDalje ejb;
+
 	public void onMessage(Message message) {
 		if (message instanceof TextMessage) {
 			TextMessage tm = (TextMessage) message;
 			try {
 				log.info("[AIVMessageDriven] SPOROCILO: "+tm.getText());
-			} catch (JMSException e) {
+				ejb.dajmo("gnjavim");
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else {
