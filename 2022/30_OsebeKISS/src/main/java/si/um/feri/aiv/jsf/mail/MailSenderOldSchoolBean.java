@@ -21,7 +21,7 @@ public class MailSenderOldSchoolBean implements Serializable {
 
 	private static final long serialVersionUID = 4671068915774343475L;
 
-	final String MAIL_FROM="****";
+	final String MAIL_FROM="ime.priimek@um.si";
 	final String MAIL_PASSWORD="****";
 	
 	public void send(String to) throws Exception {
@@ -44,8 +44,8 @@ public class MailSenderOldSchoolBean implements Serializable {
 		message.setFrom(new InternetAddress(MAIL_FROM));
 		message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
 		message.setReplyTo(InternetAddress.parse(MAIL_FROM));
-		message.setSubject("Naslov sporočila");
-		message.setContent("Iz KISS rešitve.", "text/plain");
+		message.setSubject("Naslov sporocila");
+		message.setContent("Iz KISS resitve.", "text/plain");
 		Transport.send(message);
 	}
 

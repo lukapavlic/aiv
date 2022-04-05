@@ -3,12 +3,9 @@ package si.um.feri.aiv.jsf;
 import java.io.Serializable;
 import java.util.List;
 import java.util.logging.Logger;
-
-import jakarta.ejb.EJB;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
 import si.um.feri.aiv.dao.OsebaDao;
-import si.um.feri.aiv.dao.OsebaMemoryDao;
 import si.um.feri.aiv.dao.OsebaMySqlDao;
 import si.um.feri.aiv.vao.Kontakt;
 import si.um.feri.aiv.vao.Oseba;
