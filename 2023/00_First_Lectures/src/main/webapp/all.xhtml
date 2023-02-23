@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Keep It Simple &amp; Stupid</title>
+</h:head>
+
+<h:body>
+<f:view>
+<h:form>
+
+	[ <a href="#{facesContext.externalContext.applicationContextPath}/faces/all.xhtml">All</a> |
+	<a href="#{facesContext.externalContext.applicationContextPath}/faces/edit.xhtml?email=NULL">Add new</a> ]
+	<hr />
+
+	<h:dataTable value="#{demo.allPeople}" var="o">
+		<h:column>
+			<h:link value="#{o.email}" outcome="details">
+				<f:param name="email" value="#{o.email}" />
+			</h:link>
+		</h:column>
+		<h:column>#{o.surname}</h:column>
+		<h:column>#{o.name}</h:column>
+		<h:column>
+			<h:link value="Edit" outcome="edit">
+				<f:param name="email" value="#{o.email}" />
+			</h:link> |
+			<h:commandLink value="Delete" actionListener="#{demo.deletePerson(o)}" />
+		</h:column>
+	</h:dataTable>
+
+</h:form>
+</f:view>
+</h:body>
+
+</html>
