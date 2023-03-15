@@ -1,5 +1,8 @@
 package si.um.feri.jee.petapp.vao;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Pet {
 
     public Pet() {
@@ -8,22 +11,23 @@ public class Pet {
 
     public Pet(int id, String kind, String name) {
         this.id = id;
-        this.kind = kind;
-        this.name = name;
+        this.petKind = kind;
+        this.petName = name;
     }
 
+    @Id
     int id;
 
-    String kind;
+    String petKind;
 
-    String name;
+    String petName;
 
     @Override
     public String toString() {
         return "Pet{" +
                 "id=" + id +
-                ", kind='" + kind + '\'' +
-                ", name='" + name + '\'' +
+                ", kind='" + petKind + '\'' +
+                ", name='" + petName + '\'' +
                 '}';
     }
 
@@ -35,20 +39,20 @@ public class Pet {
         this.id = id;
     }
 
-    public String getKind() {
-        return kind;
+    public String getPetKind() {
+        return petKind;
     }
 
-    public void setKind(String kind) {
-        this.kind = kind;
+    public void setPetKind(String petKind) {
+        this.petKind = petKind;
     }
 
-    public String getName() {
-        return name;
+    public String getPetName() {
+        return petName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPetName(String name) {
+        this.petName = name;
     }
 
 }

@@ -19,12 +19,15 @@ public class MainViewJSFBean implements Serializable {
 
     int idOfNewPet;
 
-    PetDao dao=new PetDao();
+    //PetDao dao=new PetDaoBean();
 
+    @EJB
+    PetDao dao;
     List<Pet> petsInTheTable;
 
     @EJB
     MyFirstEjb ejb;
+
     public void addNewPet() {
         Pet newOne=new Pet(idOfNewPet,kindOfNewPet,nameOfNewPet);
         dao.add(newOne);
@@ -56,14 +59,6 @@ public class MainViewJSFBean implements Serializable {
 
     public void setIdOfNewPet(int idOfNewPet) {
         this.idOfNewPet = idOfNewPet;
-    }
-
-    public PetDao getDao() {
-        return dao;
-    }
-
-    public void setDao(PetDao dao) {
-        this.dao = dao;
     }
 
     public List<Pet> getPetsInTheTable() {

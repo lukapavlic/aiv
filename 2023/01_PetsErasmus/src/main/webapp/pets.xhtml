@@ -20,21 +20,18 @@
 				Name of new pet: <h:inputText value="#{petsbean.nameOfNewPet}" /> <br/>
 				<h:commandButton value="Create a new pet" actionListener="#{petsbean.addNewPet}" />
 
-
 				<h:dataTable value="#{petsbean.petsInTheTable}" var="p">
 
 					<h:column>
-
-
 						#{p.id}
 					</h:column>
 
 					<h:column>
-						#{p.kind}
+						#{p.petKind}
 					</h:column>
 
 					<h:column>
-						#{p.name}
+						#{p.petName}
 					</h:column>
 
 				</h:dataTable>
