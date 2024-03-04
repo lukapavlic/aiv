@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Keep It Simple &amp; Stupid</title>
+</h:head>
+
+<h:body>
+<f:view>
+<h:form>
+
+	[ <a href="#{facesContext.externalContext.applicationContextPath}/faces/vse.xhtml">Vse osebe</a> |
+	  <a href="#{facesContext.externalContext.applicationContextPath}/faces/urejanje.xhtml?email=NULL">Dodajanje</a> ]
+	<hr />
+
+	<f:metadata>
+		<f:viewParam name="email" value="#{demo.izbranEmail}" />
+	</f:metadata>
+	
+	Ime: <b>#{demo.izbranaOseba.ime}</b><br/>
+	Priimek: <b>#{demo.izbranaOseba.priimek}</b><br/>
+	E-mail: <b>#{demo.izbranaOseba.email}</b><br/>
+	Vnos:	<b><h:outputText value="#{demo.izbranaOseba.datumVpisa.time}">
+				<f:convertDateTime pattern="dd. MM. yyyy HH:mm:ss" />
+			</h:outputText></b>
+	<br/><br/>
+	
+	<h:dataTable value="#{demo.izbranaOseba.kontakti}" var="o" rendered="#{not empty demo.izbranaOseba.kontakti}">
+		<f:facet name="header">
+			<h:outputText value="Kontakti"/>
+		</f:facet>
+		<h:column>
+			<h:outputText value="#{o.tip}" rendered="#{o.urejanje eq false}"/>
+			<h:selectOneRadio value="#{o.tip}" rendered="#{o.urejanje}">
+				<f:selectItem itemValue="Doma" itemLabel="Doma" />
+				<f:selectItem itemValue="Služba" itemLabel="Služba" />
+				<f:selectItem itemValue="Drugo" itemLabel="Drugo" />
+			</h:selectOneRadio>
+		</h:column>
+		<h:column>
+			<h:outputText value="#{o.naziv}" rendered="#{o.urejanje eq false}" />
+			<h:inputText value="#{o.naziv}" rendered="#{o.urejanje}" />
+		</h:column>
+		<h:column>
+			<h:commandButton value="Shrani" actionListener="#{demo.shraniKontakt(o)}" rendered="#{o.urejanje}" />
+			<h:commandLink value="Izbriši" actionListener="#{demo.izbrisiKontakt(o)}" rendered="#{o.urejanje eq false}" />
+			|
+			<h:commandLink value="Uredi" actionListener="#{demo.urediKontakt(o)}" rendered="#{o.urejanje eq false}" />
+		</h:column>
+	</h:dataTable>
+	
+	<h:commandLink value="Dodaj kontakt" actionListener="#{demo.dodajKontakt}"/>
+	
+</h:form>
+</f:view>
+</h:body>
+
+</html>
+
