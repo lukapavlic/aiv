@@ -6,3 +6,5 @@ Nekateri primeri iz vaj:
  - opazovalec
  - strategija
  - iterator
+ - prototip
+ - stanje
