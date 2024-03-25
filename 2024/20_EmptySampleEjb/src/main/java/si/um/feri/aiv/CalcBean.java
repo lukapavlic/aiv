@@ -1,10 +1,11 @@
 package si.um.feri.aiv;
 
+import jakarta.ejb.Stateful;
 import jakarta.ejb.Stateless;
 
 import si.um.feri.aiv.ejb.Calculation;
 
-@Stateless
+@Stateful
 public class CalcBean implements Calc {
 
 	private double history;

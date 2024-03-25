@@ -10,35 +10,29 @@ import java.util.List;
 @Stateless
 public class PetDaoBean implements PetDao {
 
-    //private List<Pet> pets=new ArrayList<>();
-
     @PersistenceContext
     EntityManager em;
 
     @Override
     public void add(Pet newOne) {
         System.out.println("Adding new pet "+newOne);
-        //pets.add(newOne);
-
         em.persist(newOne);
 
-        //newOne.setPetName("This is the name!");
+
+
+
+
     }
 
     @Override
     public List<Pet> getAll() {
         System.out.println("Getting pets");
-       // return pets;
         return em.createQuery("select p from Pet p").getResultList();
     }
 
     @Override
     public Pet findOne(int id) {
         return em.find(Pet.class,id);
-//        for (Pet p: pets)
-//            if (p.getId()==id)
-//                return p;
-//        return null;
     }
 
 }

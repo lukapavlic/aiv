@@ -2,6 +2,8 @@ package si.um.feri.jee.petapp.vao;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Pet {
 
@@ -15,7 +17,19 @@ public class Pet {
         this.petName = name;
     }
 
+    @OneToMany
+    private List<Owner> owners;
+
+    public List<Owner> getOwners() {
+        return owners;
+    }
+
+    public void setOwners(List<Owner> owners) {
+        this.owners = owners;
+    }
+
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
 
     String petKind;

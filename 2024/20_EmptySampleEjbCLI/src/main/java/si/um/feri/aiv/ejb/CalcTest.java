@@ -1,6 +1,8 @@
 package si.um.feri.aiv.ejb;
 
 import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
 import si.um.feri.aiv.Calc;
 
 import java.util.Properties;
@@ -38,11 +40,39 @@ public class CalcTest {
 		for (int i = 0; i < 5; i++) {
 			System.out.println(c.add(c.getHistory(), 1));
 		}
-		
-		System.out.println("------------------------------");
-		
-		Demo demo=(Demo) ctx.lookup("EmptySampleEjb/DemoBean!si.um.feri.aiv.ejb.Demo");
-		System.out.println(demo.racunaj(1, 2, 3));
+
+		Runnable r=new Runnable() {
+			@Override
+			public void run() {
+                Calc c = null;
+                try {
+                    c = (Calc) ctx.lookup("EmptySampleEjb/CalcBean!si.um.feri.aiv.Calc");
+                } catch (NamingException e) {
+                    throw new RuntimeException(e);
+                }
+				c.add(0,0);
+                for (int i=0;i<100;i++) {
+					c.add(c.getHistory(),1.0);
+					System.out.println(c.getHistory());
+                    try {
+                        Thread.sleep(20);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+			}
+		};
+
+		new Thread(r).start();
+		new Thread(r).start();
+		new Thread(r).start();
+
+
+
+//		System.out.println("------------------------------");
+//
+//		Demo demo=(Demo) ctx.lookup("EmptySampleEjb/DemoBean!si.um.feri.aiv.ejb.Demo");
+//		System.out.println(demo.racunaj(1, 2, 3));
 		
 	}
 

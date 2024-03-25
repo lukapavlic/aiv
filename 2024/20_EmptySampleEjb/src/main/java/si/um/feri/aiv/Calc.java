@@ -1,5 +1,6 @@
 package si.um.feri.aiv;
 
+import jakarta.ejb.Local;
 import jakarta.ejb.Remote;
 import si.um.feri.aiv.ejb.Calculation;
 
