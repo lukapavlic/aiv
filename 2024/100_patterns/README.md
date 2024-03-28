@@ -8,3 +8,4 @@ Nekateri primeri iz vaj:
  - iterator
  - prototip
  - stanje
+ - veriga odgovornosti
