@@ -4,6 +4,9 @@ import si.um.feri.aiv.patterns.verigaodgovornosti.Pacient;
 
 public class Ortoped implements Zdravnik {
 
+    public Ortoped() {
+    }
+
     public Ortoped(Zdravnik naslednji) {
         this.naslednji = naslednji;
     }
@@ -14,6 +17,7 @@ public class Ortoped implements Zdravnik {
     public void pozdravi(Pacient pacient) {
         if (Pacient.Tezava.ZLOMLJENA_NOGA.equals(pacient.getKajJeNarobe())) {
             System.out.println("Prišli ste na pravo mesto. Mavec in bergle.");
+            return;
         }
         if (naslednji!=null) naslednji.pozdravi(pacient);
     }

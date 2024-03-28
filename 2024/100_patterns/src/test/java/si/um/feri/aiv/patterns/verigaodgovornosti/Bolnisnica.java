@@ -12,7 +12,7 @@ public class Bolnisnica {
               new Oftalmolog(
               new ORL(
               new Ortoped(
-              new Zobozdravnik(null)
+              new Zobozdravnik()
           ))));
 
         zdravniki.pozdravi(new Pacient(Pacient.Tezava.ZLOMLJENA_NOGA));

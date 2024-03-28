@@ -8,12 +8,16 @@ public class Zobozdravnik implements Zdravnik {
         this.naslednji = naslednji;
     }
 
+    public Zobozdravnik() {
+    }
+
     private Zdravnik naslednji;
 
     @Override
     public void pozdravi(Pacient pacient) {
         if (Pacient.Tezava.ZOBOBOL.equals(pacient.getKajJeNarobe())) {
             System.out.println("Prišli ste na pravo mesto. Plomba.");
+            return;
         }
         if (naslednji!=null) naslednji.pozdravi(pacient);
     }
