@@ -37,9 +37,9 @@ public class CalcTest {
 
 		System.out.println(c.getLastCalculation());
 
-		for (int i = 0; i < 5; i++) {
-			System.out.println(c.add(c.getHistory(), 1));
-		}
+//		for (int i = 0; i < 500; i++) {
+//			System.out.println(c.add(c.getHistory(), 1));
+//		}
 
 		Runnable r=new Runnable() {
 			@Override

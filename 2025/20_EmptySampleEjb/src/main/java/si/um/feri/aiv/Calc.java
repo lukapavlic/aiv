@@ -4,7 +4,8 @@ import jakarta.ejb.Local;
 import jakarta.ejb.Remote;
 import si.um.feri.aiv.ejb.Calculation;
 
-@Remote
+//@Remote
+@Local
 public interface Calc {
 
 	double add(double a, double b);

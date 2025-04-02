@@ -1,12 +1,18 @@
 package si.um.feri.jee.sample.jsf;
 
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Named;
+import lombok.Data;
 
 import java.io.Serializable;
 
+@Data
 @Named("kalkulator")
-@SessionScoped
+//@SessionScoped
+//@ApplicationScoped
+@RequestScoped
 public class Calculator implements Serializable {
 
     private int a=8;
@@ -18,27 +24,4 @@ public class Calculator implements Serializable {
         rezultat=a+b;
     }
 
-    public int getA() {
-        return a;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public int getB() {
-        return b;
-    }
-
-    public void setB(int b) {
-        this.b = b;
-    }
-
-    public int getRezultat() {
-        return rezultat;
-    }
-
-    public void setRezultat(int rezultat) {
-        this.rezultat = rezultat;
-    }
 }

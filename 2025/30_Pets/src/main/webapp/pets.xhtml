@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	
+	<h:head>
+		<meta charset="UTF-8" />
+		<title>Sample</title>
+	</h:head>
+	
+	<h:body>
+		<h1>Sample</h1>
+		
+		<f:view>
+
+			<h:form>
+
+				Id of new pet: <h:inputText value="#{petsbean.idOfNewPet}" /> <br/>
+				Kind of new pet: <h:inputText value="#{petsbean.kindOfNewPet}" /> <br/>
+				Name of new pet: <h:inputText value="#{petsbean.nameOfNewPet}" /> <br/>
+				<h:commandButton value="Create a new pet" actionListener="#{petsbean.addNewPet}" />
+
+				<h:dataTable value="#{petsbean.petsInTheTable}" var="p">
+
+					<h:column>
+						#{p.id}
+					</h:column>
+
+					<h:column>
+						#{p.petKind}
+					</h:column>
+
+					<h:column>
+						#{p.petName}
+					</h:column>
+
+				</h:dataTable>
+
+
+			</h:form>
+
+		</f:view>
+		
+	</h:body>
+	
+</html>
