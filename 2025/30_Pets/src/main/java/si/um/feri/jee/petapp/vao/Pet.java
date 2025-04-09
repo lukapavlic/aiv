@@ -5,12 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
 @Data
 @NoArgsConstructor
 @ToString
-
-
 @Entity
 public class Pet {
 
@@ -27,8 +24,5 @@ public class Pet {
     String petKind;
 
     String petName;
-
-//    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-//    Owner owner;
 
 }

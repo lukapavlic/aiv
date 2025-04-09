@@ -6,6 +6,7 @@ import java.util.List;
 
 @Local
 public interface PetDao {
+
     void add(Pet newOne);
 
     List<Pet> getAll();
