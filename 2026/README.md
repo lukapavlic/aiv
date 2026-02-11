@@ -1,4 +1,4 @@
-# aiv
+# Information Systems Architectures and Patterns
 
 Examples from the course **"Information Systems Architectures and
 Patterns" (Arhitekture IS in Vzorci)**, IPT UNI 2nd year.
