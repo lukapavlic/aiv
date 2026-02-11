@@ -20,11 +20,11 @@ exercises.
 
 | Project Folder | Short Description |
 |----------|----------|
-| 00_JSF101 | Basic JavaServer Faces (JSF) example project demonstrating the fundamentals of JSF web applications. |
-| 00_Java101 | Introductory Java project showing core Java concepts used in the course (e.g., classes, methods, packages, basic app structure). |
-| mvnEmptyJsf | Minimal empty JSF project configured with Maven --- a skeleton to bootstrap JSF applications with standard Maven structure. |
 | mvnTemplate | Maven template project with initial setup (POM files, directory layout) designed to be used as a starting point for new course examples and exercises. |
-                                  
+| 00_Java101 | Introductory Java project showing core Java concepts used in the course (e.g., classes, methods, packages, basic app structure). Unit tests and Lombok is included. |
+| mvnEmptyJsf | Minimal empty JSF project configured with Maven --- a skeleton to bootstrap JSF applications with standard Maven structure. |
+| 00_JSF101 | Basic JavaServer Faces (JSF) example project demonstrating the fundamentals of JSF web applications. Primefaces included, but commented.|
+                                 
 
 ------------------------------------------------------------------------
 
