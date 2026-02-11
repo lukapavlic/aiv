@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+>
+	
+<ui:composition template="WEB-INF/template/template.xhtml">
+
+	<ui:define name="content">
+		<f:view>
+			<h:form>
+				First name: <h:inputText id="firstNameInput" value="#{people.personOnUi.firstName}"><f:validateRequired /></h:inputText> * <h:message for="firstNameInput" style="color:red" /> <br/>
+				Last name: <h:inputText id="lastNameInput" value="#{people.personOnUi.lastName}"><f:validateRequired /></h:inputText> * <h:message for="lastNameInput" style="color:red" /> <br/>
+				Age: <h:inputText value="#{people.personOnUi.age}"/> <br/>
+
+				<h:commandButton value="Add" actionListener="#{people.addPersonFromUi()}" />
+
+				<hr/>
+
+				<h:dataTable value="#{people.allPeople}" var="p">
+					<h:column>
+						<f:facet name="header">First name</f:facet>
+						#{p.firstName}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Last name</f:facet>
+						#{p.lastName}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Age</f:facet>
+						#{p.age}
+					</h:column>
+				</h:dataTable>
+
+			</h:form>
+		</f:view>
+	</ui:define>
+
+</ui:composition>
+
+</html>
