@@ -25,6 +25,7 @@ exercises.
 | 01_jsp | JSP View demo |
 | 02_servlet | HTTP handling with Servlet |
 | 03_mvcDemo | Combining view technology (JSP) with controller (Servlet) to demonstrate MVC behaviour. |
+| 04_node_demo | HTTP handling with Node.JS |
 | mvnEmptyJsf | Minimal empty JSF project configured with Maven --- a skeleton to bootstrap JSF applications with standard Maven structure. |
 | 00_JSF101 | Basic JavaServer Faces (JSF) example project demonstrating the fundamentals of JSF web applications. Primefaces included, but commented.|
                                  
